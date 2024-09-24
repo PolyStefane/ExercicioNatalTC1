@@ -41,6 +41,11 @@ public class BalançaPresentesTeste {
         assertEquals("S", Balanca.Equilibrou(pesos));
     }
 
-
+    @Test
+    @DisplayName("Should balance with many heavy weights 15, 10, 22")
+    public void ShouldBalanceWithHeavyWeights1510And22(){
+        int[] pesos = {15,10,22};
+        assertEquals("N", Balanca.Equilibrou(pesos));
+    }
 
 }
