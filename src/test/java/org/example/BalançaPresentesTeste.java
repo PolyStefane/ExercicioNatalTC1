@@ -20,7 +20,12 @@ public class BalançaPresentesTeste {
         assertEquals("N", Balanca.Equilibrou(pesos));
     }
 
-
+    @Test
+    @DisplayName("Should balance the gifts with a exactly difference of 5 kg")
+    public void ShouldBalanceTheGiftsExactlyDifferenceOf5(){
+        int[] pesos = {3,8};
+        assertEquals("S", Balanca.Equilibrou(pesos));
+    }
 
 
 }
