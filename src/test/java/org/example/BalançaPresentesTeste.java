@@ -48,4 +48,12 @@ public class BalançaPresentesTeste {
         assertEquals("N", Balanca.Equilibrou(pesos));
     }
 
+    @Test
+    @DisplayName("Should balance with no gifts (empty)")
+    public void ShouldBalanceWithNoGifts() {
+        int[] pesos = {};
+        assertEquals("S", Balanca.Equilibrou(pesos));
+    }
+
+
 }
