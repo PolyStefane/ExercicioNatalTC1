@@ -6,7 +6,9 @@ public class Balanca {
         int ladoB = 0;
 
         for (int peso: pesos){
-
+            if (peso < 0){
+                throw new IllegalArgumentException();
+            }
             if((ladoA + peso) - ladoB <= 5){
                 ladoA += peso;
             } else if ((ladoB + peso) - ladoA <= 5) {
