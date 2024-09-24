@@ -34,4 +34,13 @@ public class BalançaPresentesTeste {
         assertEquals("S", Balanca.Equilibrou(pesos));
     }
 
+    @Test
+    @DisplayName("Should balance with only one light weight 2kg")
+    public void ShouldBalanceWithOnlyOneLightWeight2(){
+        int[] pesos = {2};
+        assertEquals("S", Balanca.Equilibrou(pesos));
+    }
+
+
+
 }
