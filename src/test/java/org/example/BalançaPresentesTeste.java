@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class BalançaPresentesTeste {
     @Test
@@ -55,5 +56,11 @@ public class BalançaPresentesTeste {
         assertEquals("S", Balanca.Equilibrou(pesos));
     }
 
+    @Test
+    @DisplayName("Should return error when input negative weights")
+    public void ShouldReturnErrorWithNegativeWeights() {
+        int[] pesos = {-1, 3, -6};
+        assertThrows(IllegalArgumentException.class, () -> Balanca.Equilibrou(pesos));
+    }
 
 }
